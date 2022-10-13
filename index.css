@@ -1,22 +1,155 @@
+/* add border radius to all the elements */
 *{
     border-radius: 1vmin;
+    color: rgb(23, 39, 70);
 }
+
+/* set font-size of all non-specified characters */
 body{
     font-size: 1.3rem;
 }
-h2{
-    color: rgb(23, 39, 70);
-}
+
+
+/* change color of h2 */
 h2:hover{
     color: hsl(332, 56, 72);
 }
 
+nav{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.PreMeeting{
+    position:absolute;
+    margin-top: 5mm;
+    margin-bottom: 5mm;
+    margin-left: 5mm;
+    margin-right: 5mm;
+    background-color: rgb(225, 246, 255);
+    padding: 10px 10px 10px 10px;
+}
+
+header{
+    margin: 0.5cm 0.5cm 0.5cm 0.5cm;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+}
 
 #video{
+    position: relative;
     width: 60vw;
     align-items: center;
 }
 
-li{
+li:hover{
     color:cadetblue;
+}
+
+button:active{
+    background-color: rgba(97, 135, 205, 0.636);
+}
+
+p,
+span,
+a,
+button {
+    color: rgb(23, 39, 70);
+}
+
+section details{
+    text-align: left;
+}
+
+/* set border for all h2 */
+section > h2,
+div > h2 {
+    border-width: 1rem;
+    border-style: dotted;
+    border-color: beige;
+}
+
+/* set border for all the lists */
+ol ~ ul, ul ~ ol, ol, ul{
+    border-width: 0.5rem;
+    border-style: dashed;
+    border-color: beige;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* don't display video when width is too small */
+@media screen and (max-width: 47rem) {
+    #video {
+        display: none;
+    }
+}
+
+h2 + a {
+    text-decoration:overline;
+}
+
+div, section{
+    margin:auto;
+    padding: 10px 10px 10px 10px;
+}
+
+
+/* stick the footer at the bottom of the screen */
+footer {
+    position:sticky;
+    background-color: rgb(225, 246, 255);
+    bottom:0px;
+    height: 10rem;
+    max-height: 5rem;
+    width: auto;
+
+}
+
+audio.MoonlightSonata {
+    max-width: 200px;
+    max-height: 200px;
+}
+
+#DoNothing{
+    display:flex;
+    display:block;
+}
+
+#DoNothing:hover{
+    
+    display:inline;
+    display: inline-flex;
+}
+
+/* Grid */
+#grid-container{
+    display: inline-grid;
+    grid-template-columns: [first] 40rem [line2] 40rem[end];
+    grid-template-rows: [row1-start] 25% [row1-end] auto [last-line];
+    
+}
+#item-a{
+    grid-column-start: first;
+    grid-column-end: line2;
+    grid-row-start: row1-start;
+    grid-row-end: row1-end;
+    color: darkseagreen;
+    background-color: aliceblue;
+}
+#item-b{
+    grid-column-start: line2;
+    grid-column-end: end;
+    grid-row-start: row1-end;
+    grid-row-end: last-line;
+    color: rgb(216, 157, 140);
+    text-align: center;
+    background-color: aliceblue;
+}
+
+img[src = "short.png"]{
+    border:4px solid rgb(198, 216, 244);
 }
