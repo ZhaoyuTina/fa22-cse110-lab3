@@ -1,0 +1,22 @@
+*{
+    border-radius: 1vmin;
+}
+body{
+    font-size: 1.3rem;
+}
+h2{
+    color: rgb(23, 39, 70);
+}
+h2:hover{
+    color: hsl(332, 56, 72);
+}
+
+
+#video{
+    width: 60vw;
+    align-items: center;
+}
+
+li{
+    color:cadetblue;
+}
